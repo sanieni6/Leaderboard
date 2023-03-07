@@ -11,11 +11,13 @@
 
 body {
   @include displayed($theme:column);
+
   align-items: center;
 }
 
 header {
   @include displayed;
+
   align-items: flex-start;
   width: 65%;
   margin-top: 50px;
@@ -24,7 +26,9 @@ header {
 .main {
   width: 85%;
   margin-top: 30px;
+
   @include displayed;
+
   align-items: center;
   justify-content: center;
   gap: 50px;
@@ -33,12 +37,15 @@ header {
 .scores,
 .add-form {
   width: 35%;
+
   @include displayed($theme:column);
+
   gap: 10px;
 }
 
 .scores-head {
   @include displayed;
+
   gap: 12px;
 }
 
@@ -49,5 +56,6 @@ header {
 
 .form {
   @include displayed($theme:column);
+
   gap: 10px;
 }
