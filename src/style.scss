@@ -1,0 +1,53 @@
+@mixin displayed($theme: row) {
+  display: flex;
+  flex-direction: $theme;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @include displayed($theme:column);
+  align-items: center;
+}
+
+header {
+  @include displayed;
+  align-items: flex-start;
+  width: 65%;
+  margin-top: 50px;
+}
+
+.main {
+  width: 85%;
+  margin-top: 30px;
+  @include displayed;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.scores,
+.add-form {
+  width: 35%;
+  @include displayed($theme:column);
+  gap: 10px;
+}
+
+.scores-head {
+  @include displayed;
+  gap: 12px;
+}
+
+.scores-list {
+  list-style: none;
+  border: solid #000 1px;
+}
+
+.form {
+  @include displayed($theme:column);
+  gap: 10px;
+}
