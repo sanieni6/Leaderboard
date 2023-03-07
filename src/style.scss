@@ -36,16 +36,21 @@ header {
 
 .scores,
 .add-form {
-  width: 35%;
+  width: 30%;
 
   @include displayed($theme:column);
 
   gap: 10px;
 }
 
+.add-form {
+  width: 20%;
+}
+
 .scores-head {
   @include displayed;
 
+  justify-content: space-between;
   gap: 12px;
 }
 
@@ -58,4 +63,29 @@ header {
   @include displayed($theme:column);
 
   gap: 10px;
+  width: 100%;
+}
+
+.form-title {
+  width: 100%;
+  font-size: 35px;
+}
+
+.submit-button {
+  width: 40%;
+  align-self: flex-end;
+}
+
+.scores-head > h2 {
+  font-size: 35px;
+}
+
+.scores-head > button {
+  width: 30%;
+  height: max-content;
+  align-self: center;
+}
+
+header > h1 {
+  font-size: 45px;
 }
