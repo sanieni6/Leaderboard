@@ -89,3 +89,9 @@ header {
 header > h1 {
   font-size: 45px;
 }
+
+.li-element {
+  @include displayed;
+
+  border: #000 solid 1px;
+}
