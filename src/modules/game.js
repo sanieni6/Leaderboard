@@ -2,17 +2,16 @@ const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/game
 
 // eslint-disable-next-line no-unused-vars
 const game = async () => {
-  const config = {
+  const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/', {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json',
+      'Content-type': 'application/json',
     },
     body: JSON.stringify({
       name: 'fulbito',
     }),
-  };
-  const res = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/', config);
-  const data = await res.json();
+  });
+  const data = await response.json();
   return data;
 };
 export default url;

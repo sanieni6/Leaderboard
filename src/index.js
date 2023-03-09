@@ -10,6 +10,16 @@ const name = document.querySelector('.name');
 const score = document.querySelector('.score');
 const ulElement = document.querySelector('.scores-list');
 const refreshButton = document.querySelector('.refresh');
+const spanMessage = document.querySelector('.message');
+
+const displayMessage = (message) => {
+  message.then((response) => {
+    spanMessage.textContent = response.result;
+  });
+  setTimeout(() => {
+    spanMessage.textContent = '';
+  }, 4000);
+};
 
 const generateList = () => {
   ulElement.innerHTML = '';
@@ -22,7 +32,7 @@ const generateList = () => {
 
 submitBtn.addEventListener('submit', (event) => {
   event.preventDefault();
-  create(name.value, score.value);
+  displayMessage(create(name.value, score.value));
   name.value = '';
   score.value = '';
   setTimeout(() => {
